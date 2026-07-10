@@ -1,9 +1,17 @@
-# AI Memory Wiki (AI 记忆机制知识库)
+# AI 记忆与协同架构知识库 (AI Memory Wiki)
 
-This repository is dedicated to the research, system analysis, and evolution of AI memory architectures, including storage, writing, and recall mechanisms.
+本知识库用于存放、梳理和推演大模型时代的认知架构、长短期记忆流转模型，以及相关开发框架的落地实践。
 
-这是一个专门用于研究、系统分析和演进 AI 记忆架构（包括存储、写入和召回机制）的知识库。
+## 📁 核心目录结构
 
-## Contents (内容)
+### 1. `ai_memory/` (记忆理论与架构探索)
+探索大模型上下文、非显式存储思想、操作系统指针概念在 AI 记忆中的映射。
+- `ai_memory_panorama.md`: AI记忆全景图谱
+- `1-SMW.md`, `1-WDD.md`, `VAC.md`, `SIP.md` 等（C:\study\ai 开发 下属理论草稿）
 
-- **[AI Memory Panorama (AI 记忆机制全景透视)](./ai_memory_panorama.md)**
+### 2. `ai_dev/` (开发框架与落地选型)
+探索市面上主流的 Agent 开发框架、向量图谱方案选型与工程化挑战。
+*(待补充)*
+
+---
+*注：本知识库处于高度演进期，分类结构将随着探索深度逐步细化。*
