@@ -1,0 +1,45 @@
+:root {
+  --bg-primary: #1e1e2e;
+  --bg-secondary: #252536;
+  --bg-tertiary: #2d2d44;
+  --bg-card: #2a2a3c;
+  --bg-hover: #363650;
+  --border-color: #3d3d5c;
+  --text-primary: #e0e0f0;
+  --text-secondary: #a0a0c0;
+  --text-muted: #6c6c8a;
+  --accent-blue: #6c8cff;
+  --accent-green: #4ec9b0;
+  --accent-yellow: #e5c07b;
+  --accent-red: #e06c75;
+  --accent-orange: #d19a66;
+  --accent-purple: #c678dd;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body, #app { height: 100%; width: 100%; overflow: hidden; }
+
+body {
+  font-family: 'Cascadia Code', 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.el-card { --el-card-bg-color: var(--bg-card) !important; --el-card-border-color: var(--border-color) !important; border: 1px solid var(--border-color); border-radius: 8px; }
+.el-button--primary { --el-button-bg-color: var(--accent-blue); --el-button-border-color: var(--accent-blue); --el-button-hover-bg-color: #7f9aff; --el-button-hover-border-color: #7f9aff; }
+.el-radio { --el-radio-text-color: var(--text-primary); --el-radio-input-border-color: var(--text-muted); --el-radio-input-bg-color: var(--bg-tertiary); }
+.el-radio__label { color: var(--text-primary) !important; }
+.el-input__wrapper { background-color: var(--bg-tertiary) !important; border: 1px solid var(--border-color) !important; box-shadow: none !important; border-radius: 6px; }
+.el-input__wrapper.is-focus { border-color: var(--accent-blue) !important; box-shadow: 0 0 0 1px var(--accent-blue) inset !important; }
+.el-input__inner { color: var(--text-primary) !important; caret-color: var(--accent-blue); }
+.el-input__inner::placeholder { color: var(--text-muted); }
+.el-progress-bar__outer { background-color: var(--bg-tertiary) !important; }
+.el-progress-bar__inner { background-color: var(--accent-blue) !important; }
+.el-upload-dragger { background-color: var(--bg-tertiary) !important; border: 2px dashed var(--border-color) !important; border-radius: 12px !important; }
+.el-upload-dragger:hover, .el-upload-dragger.is-dragover { border-color: var(--accent-blue) !important; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background-color: var(--border-color); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background-color: var(--text-muted); }

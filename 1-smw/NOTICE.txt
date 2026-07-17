@@ -1,0 +1,47 @@
+﻿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🔧 1-SMW 确定性系统工作台 已部署
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 位置: C:\Users\Administrator\1-smw\
+📖 详细指南: deploy-guide.md
+
+🚀 快速启动:
+
+  1. 安装 Python 依赖（仅首次）
+  ───────────────────────────────────────
+  cd C:\Users\Administrator\1-smw
+  python -m venv .venv
+  .venv\Scripts\pip.exe install --no-index ^
+    --find-links offline-deps\python -r backend\requirements.txt
+
+  2. 启动后端
+  ───────────────────────────────────────
+  .venv\Scripts\uvicorn.exe app.main:app --host 0.0.0.0 --port 8000
+
+  3. 验证
+  ───────────────────────────────────────
+  http://localhost:8000/health     → {"status":"ok"}
+  http://localhost:8000/docs       → Swagger 文档
+
+  4. 前端（如需修改界面）
+  ───────────────────────────────────────
+  cd frontend
+  npm run dev      → http://localhost:5173
+  npm run build    → 生产构建到 dist/
+
+  5. Nginx 统一入口（可选）
+  ───────────────────────────────────────
+  http://localhost:3201
+
+📋 使用流程:
+  浏览器打开 → 上传 .xlsx 需求表
+  → 回答苏格拉底问题 → 查看 Mermaid 图和骨架网页
+
+⚠️ 后端启动前必须确保 WSL 的 SSH 隧道通:
+  localhost:19090 → 192.168.6.100:19090
+  (Windows 上无需操作，隧道由 WSL 维护)
+
+端口对照:  3201(Nginx)  8000(后端)  5173(Vite)  19090(AI隧道)
+
+📞 问题: 联系架构师
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
